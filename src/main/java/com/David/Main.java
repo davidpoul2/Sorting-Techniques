@@ -4,6 +4,7 @@ package com.David;
 
 import com.David.BubbleSort.Bubble;
 import com.David.InsertionSort.Insertion;
+import com.David.MergeSort.Merge;
 import com.David.QuickSort.Quick;
 import com.David.SelectionSort.Selection;
 
@@ -27,6 +28,7 @@ public class Main {
         System.out.println("Enter \'2\' for Bubble sort.");
         System.out.println("Enter \'3\' for Insertion sort.");
         System.out.println("Enter \'4\' for Quick sort.");
+        System.out.println("Enter \'5\' for Merge sort.");
 
         while(true){
             System.out.println("Enter your choice");
@@ -54,6 +56,12 @@ public class Main {
                 Integer arr1[] = arr;
                 obj.quickSort(arr1);
                 System.out.println("The Quick Sorted array is " + Arrays.asList(arr1));
+            }
+            else if(option == 5){
+                Merge obj = new Merge();
+                Integer arr1[] = arr;
+                obj.mergeSort(arr1);
+                System.out.println("The MergeSorted array is " + Arrays.asList(arr1));
             }
             else break;
         }
